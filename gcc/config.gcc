@@ -18,7 +18,7 @@
 #<http://www.gnu.org/licenses/>.
 
 # This is the GCC target-specific configuration file
-# where a configuration type is mapped to different system-specific
+# where a configuration type epis mapped to different system-specific
 # definitions and files.  This is invoked by the autoconf-generated
 # configure script.  Putting it in a separate shell file lets us skip
 # running autoconf when modifying target-specific information.
@@ -1152,6 +1152,7 @@ epiphany-*-elf | epiphany-*-rtems*)
 	  epiphany-*-rtems*)
 		tm_file="${tm_file} epiphany/rtems.h rtems.h"
 	  tmake_file="${tmake_file} epiphany/t-epiphany epiphany/t-rtems"
+	  	extra_parts="crti.o crtbegin.o crtend.o crtn.o"
 		;;
 	esac
 	;;
